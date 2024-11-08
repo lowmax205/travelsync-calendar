@@ -64,11 +64,6 @@
     <string>To help you manage and set reminders for events.</string>
 	<key>PermissionGroupNotification</key>
     <string>To keep you informed with updates and alerts.</string>
-    <key>UIBackgroundModes</key>
-    <array>
-        <string>fetch</string>
-        <string>remote-notification</string>
-    </array>
 
 
 	<key>UILaunchStoryboardName</key>
