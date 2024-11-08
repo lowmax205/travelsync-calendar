@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -122,14 +123,15 @@ class _SignupPageWidgetState extends State<SignupPageWidget>
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 70.0, 0.0, 32.0),
                         child: Container(
-                          width: 200.0,
+                          width: 300.0,
                           height: 70.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           alignment: const AlignmentDirectional(0.0, 0.0),
-                          child: Text(
-                            'brand.ai',
+                          child: AutoSizeText(
+                            'Travel Sync Calendar',
+                            textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
                                 .displaySmall
                                 .override(
