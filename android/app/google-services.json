@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "62565082103",
+    "project_id": "travel-sync-r8amdb",
+    "storage_bucket": "travel-sync-r8amdb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62565082103:android:33dffefd1c2d68c73104f2",
+        "android_client_info": {
+          "package_name": "com.trio.travelsync"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62565082103-30s5qmlvvvluac9jp2scnm3r3qaqdid9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trio.travelsync",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "62565082103-vkcnrnb7hgmlk90j4qajhda0dbk5mnso.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR14TUHYDJVASX1lSGLUq34zcS71Sxogk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "62565082103-vkcnrnb7hgmlk90j4qajhda0dbk5mnso.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "62565082103-7ctr2p6pdh5vksf3oujrfbvk4sonipkn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.trio.travelsync"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
