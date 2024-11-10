@@ -51,7 +51,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
           backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
           title: Text(
-            'Calendar',
+            'Travel Sync Calendar',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
                   color: const Color(0xFF14181B),
