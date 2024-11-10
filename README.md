@@ -21,7 +21,7 @@
 - **Holiday Calendar Integration**  
   Seamlessly integrates holiday events into your personal calendar for easy access and reference.
   
-- **User Profile** *(Planned Feature)*  
+- **User Profile**  
   Save preferences and travel history with customizable user profiles.
 
 ---
