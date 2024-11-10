@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
@@ -72,33 +73,48 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const HomePageWidget() : const SigninPageWidget(),
+          appStateNotifier.loggedIn ? const HomePageWidget() : const Auth2LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const HomePageWidget() : const SigninPageWidget(),
-        ),
-        FFRoute(
-          name: 'SignupPage',
-          path: '/signupPage',
-          builder: (context, params) => const SignupPageWidget(),
-        ),
-        FFRoute(
-          name: 'SigninPage',
-          path: '/signinPage',
-          builder: (context, params) => const SigninPageWidget(),
-        ),
-        FFRoute(
-          name: 'ProfilePage',
-          path: '/profilePage',
-          builder: (context, params) => const ProfilePageWidget(),
+              appStateNotifier.loggedIn ? const HomePageWidget() : const Auth2LoginWidget(),
         ),
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
           builder: (context, params) => const HomePageWidget(),
+        ),
+        FFRoute(
+          name: 'auth_2_Create',
+          path: '/auth2Create',
+          builder: (context, params) => const Auth2CreateWidget(),
+        ),
+        FFRoute(
+          name: 'auth_2_Login',
+          path: '/auth2Login',
+          builder: (context, params) => const Auth2LoginWidget(),
+        ),
+        FFRoute(
+          name: 'auth_2_ForgotPassword',
+          path: '/auth2ForgotPassword',
+          builder: (context, params) => const Auth2ForgotPasswordWidget(),
+        ),
+        FFRoute(
+          name: 'auth_2_createProfile',
+          path: '/auth2CreateProfile',
+          builder: (context, params) => const Auth2CreateProfileWidget(),
+        ),
+        FFRoute(
+          name: 'auth_2_Profile',
+          path: '/auth2Profile',
+          builder: (context, params) => const Auth2ProfileWidget(),
+        ),
+        FFRoute(
+          name: 'auth_2_EditProfile',
+          path: '/auth2EditProfile',
+          builder: (context, params) => const Auth2EditProfileWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -267,7 +283,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/signinPage';
+            return '/auth2Login';
           }
           return null;
         },

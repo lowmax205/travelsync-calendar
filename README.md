@@ -1,4 +1,4 @@
-# TravelSync
+# TravelSync Calendar
 
 A new Flutter project.
 

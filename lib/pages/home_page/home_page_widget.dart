@@ -46,78 +46,48 @@ class _HomePageWidgetState extends State<HomePageWidget>
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+          backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
           title: Text(
             'Calendar',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
+                  color: const Color(0xFF14181B),
+                  fontSize: 24.0,
                   letterSpacing: 0.0,
+                  fontWeight: FontWeight.normal,
                 ),
           ),
           actions: [
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 0.0),
-              child: badges.Badge(
-                badgeContent: Text(
-                  '1',
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Manrope',
-                        color: Colors.white,
-                        letterSpacing: 0.0,
-                      ),
-                ),
-                showBadge: true,
-                shape: badges.BadgeShape.circle,
-                badgeColor: FlutterFlowTheme.of(context).primary,
-                elevation: 4.0,
-                padding: const EdgeInsets.all(8.0),
-                position: badges.BadgePosition.topEnd(),
-                animationType: badges.BadgeAnimationType.scale,
-                toAnimate: true,
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
-                  child: Icon(
-                    Icons.chat_bubble_outline_outlined,
-                    color: FlutterFlowTheme.of(context).secondaryText,
-                    size: 28.0,
-                  ),
-                ),
-              ),
-            ),
             Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 24.0, 0.0),
               child: badges.Badge(
                 badgeContent: Text(
                   '1',
-                  style: FlutterFlowTheme.of(context).titleSmall.override(
-                        fontFamily: 'Manrope',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Plus Jakarta Sans',
                         color: Colors.white,
+                        fontSize: 14.0,
                         letterSpacing: 0.0,
+                        fontWeight: FontWeight.normal,
                       ),
                 ),
                 showBadge: true,
                 shape: badges.BadgeShape.circle,
-                badgeColor: FlutterFlowTheme.of(context).primary,
+                badgeColor: const Color(0xFF4B39EF),
                 elevation: 4.0,
-                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                padding: const EdgeInsets.all(8.0),
                 position: badges.BadgePosition.topEnd(),
                 animationType: badges.BadgeAnimationType.scale,
                 toAnimate: true,
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    context.pushNamed('ProfilePage');
-                  },
+                child: const Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                   child: Icon(
-                    Icons.manage_accounts_rounded,
-                    color: FlutterFlowTheme.of(context).secondaryText,
-                    size: 28.0,
+                    Icons.chat_bubble_outline_outlined,
+                    color: Color(0xFF57636C),
+                    size: 24.0,
                   ),
                 ),
               ),
@@ -140,18 +110,18 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       isScrollable: true,
                       labelStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(
-                                fontFamily: 'Manrope',
+                                fontFamily: 'Plus Jakarta Sans',
+                                color: Colors.white,
+                                fontSize: 18.0,
                                 letterSpacing: 0.0,
+                                fontWeight: FontWeight.normal,
                               ),
                       unselectedLabelStyle: const TextStyle(),
-                      labelColor: FlutterFlowTheme.of(context).primaryText,
-                      unselectedLabelColor:
-                          FlutterFlowTheme.of(context).primaryText,
-                      backgroundColor:
-                          FlutterFlowTheme.of(context).secondaryBackground,
-                      unselectedBackgroundColor:
-                          FlutterFlowTheme.of(context).alternate,
-                      borderColor: FlutterFlowTheme.of(context).alternate,
+                      labelColor: const Color(0xFF14181B),
+                      unselectedLabelColor: const Color(0xFF14181B),
+                      backgroundColor: Colors.white,
+                      unselectedBackgroundColor: const Color(0xFFE0E3E7),
+                      borderColor: const Color(0xFFE0E3E7),
                       borderWidth: 2.0,
                       borderRadius: 12.0,
                       elevation: 0.0,
@@ -180,9 +150,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         Container(
                           width: 100.0,
                           height: 100.0,
-                          decoration: BoxDecoration(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                          decoration: const BoxDecoration(
+                            color: Color(0xFFF1F4F8),
                           ),
                           child: SingleChildScrollView(
                             child: Column(
@@ -191,10 +160,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               children: [
                                 Container(
                                   width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    boxShadow: const [
+                                  decoration: const BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 3.0,
                                         color: Color(0x33000000),
@@ -206,9 +174,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                     ],
                                   ),
                                   child: FlutterFlowCalendar(
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    iconColor: FlutterFlowTheme.of(context)
-                                        .secondaryText,
+                                    color: const Color(0xFF4B39EF),
+                                    iconColor: const Color(0xFF57636C),
                                     weekFormat: false,
                                     weekStartsMonday: true,
                                     onChange: (DateTimeRange? newSelectedDate) {
@@ -220,33 +187,48 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         .titleLarge
                                         .override(
                                           fontFamily: 'Outfit',
+                                          color: const Color(0xFF14181B),
+                                          fontSize: 22.0,
                                           letterSpacing: 0.0,
+                                          fontWeight: FontWeight.w500,
                                         ),
                                     dayOfWeekStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          fontFamily: 'Manrope',
+                                          fontFamily: 'Plus Jakarta Sans',
+                                          color: const Color(0xFF57636C),
+                                          fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          fontWeight: FontWeight.normal,
                                         ),
                                     dateStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Manrope',
+                                          fontFamily: 'Plus Jakarta Sans',
+                                          color: const Color(0xFF14181B),
+                                          fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          fontWeight: FontWeight.normal,
                                         ),
                                     selectedDateStyle:
                                         FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
-                                              fontFamily: 'Manrope',
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              color: Colors.white,
+                                              fontSize: 16.0,
                                               letterSpacing: 0.0,
+                                              fontWeight: FontWeight.w500,
                                             ),
                                     inactiveDateStyle:
                                         FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Manrope',
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              color: const Color(0xFF57636C),
+                                              fontSize: 14.0,
                                               letterSpacing: 0.0,
+                                              fontWeight: FontWeight.normal,
                                             ),
                                     locale: FFLocalizations.of(context)
                                         .languageCode,
@@ -264,8 +246,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Manrope',
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              color: const Color(0xFF57636C),
+                                              fontSize: 14.0,
                                               letterSpacing: 0.0,
+                                              fontWeight: FontWeight.normal,
                                             ),
                                       ),
                                     ),
@@ -285,9 +270,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             child: Container(
                                               width: 100.0,
                                               decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryBackground,
+                                                color: Colors.white,
                                                 boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 3.0,
@@ -336,8 +319,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 .override(
                                                                   fontFamily:
                                                                       'Outfit',
+                                                                  color: const Color(
+                                                                      0xFF14181B),
+                                                                  fontSize:
+                                                                      24.0,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
                                                                 ),
                                                           ),
                                                         ),
@@ -365,9 +355,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 child: Card(
                                                                   clipBehavior:
                                                                       Clip.antiAliasWithSaveLayer,
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .accent3,
+                                                                  color: const Color(
+                                                                      0x4DEE8B60),
                                                                   elevation:
                                                                       0.0,
                                                                   shape:
@@ -391,11 +380,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Manrope',
+                                                                                'Plus Jakarta Sans',
                                                                             color:
-                                                                                FlutterFlowTheme.of(context).tertiary,
+                                                                                const Color(0xFFEE8B60),
+                                                                            fontSize:
+                                                                                14.0,
                                                                             letterSpacing:
                                                                                 0.0,
+                                                                            fontWeight:
+                                                                                FontWeight.normal,
                                                                           ),
                                                                     ),
                                                                   ),
@@ -408,9 +401,16 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     .bodySmall
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Manrope',
+                                                                          'Plus Jakarta Sans',
+                                                                      color: const Color(
+                                                                          0xFF14181B),
+                                                                      fontSize:
+                                                                          12.0,
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
                                                                     ),
                                                               ),
                                                             ],
@@ -422,31 +422,27 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       width: 50.0,
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
+                                                        color:
+                                                            const Color(0xFFF1F4F8),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(8.0),
                                                         shape:
                                                             BoxShape.rectangle,
                                                         border: Border.all(
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .alternate,
+                                                          color:
+                                                              const Color(0xFFE0E3E7),
                                                           width: 1.0,
                                                         ),
                                                       ),
                                                       alignment:
                                                           const AlignmentDirectional(
                                                               0.0, 0.0),
-                                                      child: Icon(
+                                                      child: const Icon(
                                                         Icons
                                                             .add_photo_alternate_outlined,
                                                         color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
+                                                            Color(0xFF14181B),
                                                         size: 24.0,
                                                       ),
                                                     ),
@@ -466,8 +462,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Manrope',
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              color: const Color(0xFF57636C),
+                                              fontSize: 14.0,
                                               letterSpacing: 0.0,
+                                              fontWeight: FontWeight.normal,
                                             ),
                                       ),
                                     ),
@@ -487,9 +486,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             child: Container(
                                               width: 100.0,
                                               decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryBackground,
+                                                color: Colors.white,
                                                 boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 3.0,
@@ -538,8 +535,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 .override(
                                                                   fontFamily:
                                                                       'Outfit',
+                                                                  color: const Color(
+                                                                      0xFF14181B),
+                                                                  fontSize:
+                                                                      24.0,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
                                                                 ),
                                                           ),
                                                         ),
@@ -558,9 +562,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                               child: Card(
                                                                 clipBehavior: Clip
                                                                     .antiAliasWithSaveLayer,
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .accent1,
+                                                                color: const Color(
+                                                                    0x4C4B39EF),
                                                                 elevation: 0.0,
                                                                 shape:
                                                                     RoundedRectangleBorder(
@@ -583,11 +586,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Manrope',
+                                                                              'Plus Jakarta Sans',
                                                                           color:
-                                                                              FlutterFlowTheme.of(context).primary,
+                                                                              const Color(0xFF4B39EF),
+                                                                          fontSize:
+                                                                              14.0,
                                                                           letterSpacing:
                                                                               0.0,
+                                                                          fontWeight:
+                                                                              FontWeight.normal,
                                                                         ),
                                                                   ),
                                                                 ),
@@ -608,9 +615,16 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     .bodySmall
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Manrope',
+                                                                          'Plus Jakarta Sans',
+                                                                      color: const Color(
+                                                                          0xFF14181B),
+                                                                      fontSize:
+                                                                          12.0,
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
                                                                     ),
                                                               ),
                                                             ),
@@ -622,31 +636,27 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       width: 50.0,
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
+                                                        color:
+                                                            const Color(0xFFF1F4F8),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(8.0),
                                                         shape:
                                                             BoxShape.rectangle,
                                                         border: Border.all(
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .alternate,
+                                                          color:
+                                                              const Color(0xFFE0E3E7),
                                                           width: 1.0,
                                                         ),
                                                       ),
                                                       alignment:
                                                           const AlignmentDirectional(
                                                               0.0, 0.0),
-                                                      child: Icon(
+                                                      child: const Icon(
                                                         Icons
                                                             .add_photo_alternate_outlined,
                                                         color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
+                                                            Color(0xFF14181B),
                                                         size: 24.0,
                                                       ),
                                                     ),
@@ -667,9 +677,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         Container(
                           width: 100.0,
                           height: 100.0,
-                          decoration: BoxDecoration(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                          decoration: const BoxDecoration(
+                            color: Color(0xFFF1F4F8),
                           ),
                           child: SingleChildScrollView(
                             child: Column(
@@ -678,10 +687,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               children: [
                                 Container(
                                   width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    boxShadow: const [
+                                  decoration: const BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 3.0,
                                         color: Color(0x33000000),
@@ -693,9 +701,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                     ],
                                   ),
                                   child: FlutterFlowCalendar(
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    iconColor: FlutterFlowTheme.of(context)
-                                        .secondaryText,
+                                    color: const Color(0xFF4B39EF),
+                                    iconColor: const Color(0xFF57636C),
                                     weekFormat: true,
                                     weekStartsMonday: true,
                                     onChange: (DateTimeRange? newSelectedDate) {
@@ -707,33 +714,48 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         .titleLarge
                                         .override(
                                           fontFamily: 'Outfit',
+                                          color: const Color(0xFF14181B),
+                                          fontSize: 22.0,
                                           letterSpacing: 0.0,
+                                          fontWeight: FontWeight.w500,
                                         ),
                                     dayOfWeekStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          fontFamily: 'Manrope',
+                                          fontFamily: 'Plus Jakarta Sans',
+                                          color: const Color(0xFF57636C),
+                                          fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          fontWeight: FontWeight.normal,
                                         ),
                                     dateStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Manrope',
+                                          fontFamily: 'Plus Jakarta Sans',
+                                          color: const Color(0xFF14181B),
+                                          fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          fontWeight: FontWeight.normal,
                                         ),
                                     selectedDateStyle:
                                         FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
-                                              fontFamily: 'Manrope',
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              color: Colors.white,
+                                              fontSize: 16.0,
                                               letterSpacing: 0.0,
+                                              fontWeight: FontWeight.w500,
                                             ),
                                     inactiveDateStyle:
                                         FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Manrope',
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              color: const Color(0xFF57636C),
+                                              fontSize: 14.0,
                                               letterSpacing: 0.0,
+                                              fontWeight: FontWeight.normal,
                                             ),
                                     locale: FFLocalizations.of(context)
                                         .languageCode,
@@ -751,8 +773,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Manrope',
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              color: const Color(0xFF57636C),
+                                              fontSize: 14.0,
                                               letterSpacing: 0.0,
+                                              fontWeight: FontWeight.normal,
                                             ),
                                       ),
                                     ),
@@ -772,9 +797,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             child: Container(
                                               width: 100.0,
                                               decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryBackground,
+                                                color: Colors.white,
                                                 boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 3.0,
@@ -823,8 +846,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 .override(
                                                                   fontFamily:
                                                                       'Outfit',
+                                                                  color: const Color(
+                                                                      0xFF14181B),
+                                                                  fontSize:
+                                                                      24.0,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
                                                                 ),
                                                           ),
                                                         ),
@@ -852,9 +882,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 child: Card(
                                                                   clipBehavior:
                                                                       Clip.antiAliasWithSaveLayer,
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .accent3,
+                                                                  color: const Color(
+                                                                      0x4DEE8B60),
                                                                   elevation:
                                                                       0.0,
                                                                   shape:
@@ -878,11 +907,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Manrope',
+                                                                                'Plus Jakarta Sans',
                                                                             color:
-                                                                                FlutterFlowTheme.of(context).tertiary,
+                                                                                const Color(0xFFEE8B60),
+                                                                            fontSize:
+                                                                                14.0,
                                                                             letterSpacing:
                                                                                 0.0,
+                                                                            fontWeight:
+                                                                                FontWeight.normal,
                                                                           ),
                                                                     ),
                                                                   ),
@@ -895,9 +928,16 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     .bodySmall
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Manrope',
+                                                                          'Plus Jakarta Sans',
+                                                                      color: const Color(
+                                                                          0xFF14181B),
+                                                                      fontSize:
+                                                                          12.0,
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
                                                                     ),
                                                               ),
                                                             ],
@@ -909,31 +949,27 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       width: 50.0,
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
+                                                        color:
+                                                            const Color(0xFFF1F4F8),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(8.0),
                                                         shape:
                                                             BoxShape.rectangle,
                                                         border: Border.all(
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .alternate,
+                                                          color:
+                                                              const Color(0xFFE0E3E7),
                                                           width: 1.0,
                                                         ),
                                                       ),
                                                       alignment:
                                                           const AlignmentDirectional(
                                                               0.0, 0.0),
-                                                      child: Icon(
+                                                      child: const Icon(
                                                         Icons
                                                             .add_photo_alternate_outlined,
                                                         color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
+                                                            Color(0xFF14181B),
                                                         size: 24.0,
                                                       ),
                                                     ),
@@ -953,8 +989,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Manrope',
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              color: const Color(0xFF57636C),
+                                              fontSize: 14.0,
                                               letterSpacing: 0.0,
+                                              fontWeight: FontWeight.normal,
                                             ),
                                       ),
                                     ),
@@ -974,9 +1013,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             child: Container(
                                               width: 100.0,
                                               decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryBackground,
+                                                color: Colors.white,
                                                 boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 3.0,
@@ -1025,8 +1062,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 .override(
                                                                   fontFamily:
                                                                       'Outfit',
+                                                                  color: const Color(
+                                                                      0xFF14181B),
+                                                                  fontSize:
+                                                                      24.0,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
                                                                 ),
                                                           ),
                                                         ),
@@ -1045,9 +1089,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                               child: Card(
                                                                 clipBehavior: Clip
                                                                     .antiAliasWithSaveLayer,
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .accent1,
+                                                                color: const Color(
+                                                                    0x4C4B39EF),
                                                                 elevation: 0.0,
                                                                 shape:
                                                                     RoundedRectangleBorder(
@@ -1070,11 +1113,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Manrope',
+                                                                              'Plus Jakarta Sans',
                                                                           color:
-                                                                              FlutterFlowTheme.of(context).primary,
+                                                                              const Color(0xFF4B39EF),
+                                                                          fontSize:
+                                                                              14.0,
                                                                           letterSpacing:
                                                                               0.0,
+                                                                          fontWeight:
+                                                                              FontWeight.normal,
                                                                         ),
                                                                   ),
                                                                 ),
@@ -1095,9 +1142,16 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     .bodySmall
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Manrope',
+                                                                          'Plus Jakarta Sans',
+                                                                      color: const Color(
+                                                                          0xFF14181B),
+                                                                      fontSize:
+                                                                          12.0,
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
                                                                     ),
                                                               ),
                                                             ),
@@ -1109,31 +1163,27 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       width: 50.0,
                                                       height: 50.0,
                                                       decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
+                                                        color:
+                                                            const Color(0xFFF1F4F8),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(8.0),
                                                         shape:
                                                             BoxShape.rectangle,
                                                         border: Border.all(
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .alternate,
+                                                          color:
+                                                              const Color(0xFFE0E3E7),
                                                           width: 1.0,
                                                         ),
                                                       ),
                                                       alignment:
                                                           const AlignmentDirectional(
                                                               0.0, 0.0),
-                                                      child: Icon(
+                                                      child: const Icon(
                                                         Icons
                                                             .add_photo_alternate_outlined,
                                                         color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
+                                                            Color(0xFF14181B),
                                                         size: 24.0,
                                                       ),
                                                     ),

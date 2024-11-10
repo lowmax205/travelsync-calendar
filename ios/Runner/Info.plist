@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>TravelSync</string>
+	<string>TravelSync Calendar</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>TravelSync</string>
+	<string>TravelSync Calendar</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 
@@ -28,8 +28,7 @@
             <string>Editor</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>com.googleusercontent.apps.62565082103-7ctr2p6pdh5vksf3oujrfbvk4sonipkn</string>
-                
+                <string>com.googleusercontent.apps.716982669499-j4drrbko4lnlq2ai259e95co5i8sabbn</string>
             </array>
         </dict>
 
@@ -37,10 +36,10 @@
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>travelsync.com</string>
+        <string>travelsynccalendar.com</string>
         <key>CFBundleURLSchemes</key>
         <array>
-        <string>travelsync</string>
+        <string>travelsynccalendar</string>
         </array>
         </dict>
     </array>
@@ -54,16 +53,7 @@
 	<true/>
 
 
-	<key>NSLocationWhenInUseUsageDescription</key>
-    <string>For providing location-based services and personzalized content.</string>
-	<key>NSContactsUsageDescription</key>
-    <string>For features that require accessing your contacts.</string>
-	<key>NSCameraUsageDescription</key>
-    <string>To capture and share images for specific features.</string>
-	<key>NSCalendarsUsageDescription</key>
-    <string>To help you manage and set reminders for events.</string>
-	<key>PermissionGroupNotification</key>
-    <string>To keep you informed with updates and alerts.</string>
+
 
 
 	<key>UILaunchStoryboardName</key>

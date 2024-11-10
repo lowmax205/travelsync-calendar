@@ -1,4 +1,4 @@
-package com.trio.travelsync
+package com.solo.travelsynccalendar
 
 import io.flutter.embedding.android.FlutterActivity
 
