@@ -7,3 +7,4 @@ pubspec.lock
 .dart_tool/dartpad/web_plugin_registrant.dart
 .dart_tool/extension_discovery/vs_code.json
 test/widget_test.dart
+README.md
