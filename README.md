@@ -23,7 +23,7 @@
   
 - **User Profile** 
   Save preferences and travel history with customizable user profiles.
-s
+  
 ---
 
 ## 📱 Screenshots (FIGMA DESIGN)
