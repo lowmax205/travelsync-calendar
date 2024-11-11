@@ -62,7 +62,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
           ),
           actions: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 24.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 18.0, 0.0),
               child: badges.Badge(
                 badgeContent: Text(
                   '1',
@@ -83,11 +83,49 @@ class _HomePageWidgetState extends State<HomePageWidget>
                 animationType: badges.BadgeAnimationType.scale,
                 toAnimate: true,
                 child: const Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
                   child: Icon(
                     Icons.chat_bubble_outline_outlined,
                     color: Color(0xFF57636C),
                     size: 24.0,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 18.0, 0.0),
+              child: InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  context.pushNamed('auth_2_Profile');
+                },
+                child: badges.Badge(
+                  badgeContent: Text(
+                    '1',
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Inter',
+                          color: Colors.white,
+                          letterSpacing: 0.0,
+                        ),
+                  ),
+                  showBadge: true,
+                  shape: badges.BadgeShape.circle,
+                  badgeColor: FlutterFlowTheme.of(context).primary,
+                  elevation: 4.0,
+                  padding: const EdgeInsets.all(8.0),
+                  position: badges.BadgePosition.topEnd(),
+                  animationType: badges.BadgeAnimationType.scale,
+                  toAnimate: true,
+                  child: Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
+                    child: Icon(
+                      Icons.person_outline_outlined,
+                      color: FlutterFlowTheme.of(context).secondaryText,
+                      size: 30.0,
+                    ),
                   ),
                 ),
               ),

@@ -153,7 +153,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
           Align(
             alignment: const AlignmentDirectional(0.0, -1.0),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 32.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 20.0),
               child: FFButtonWidget(
                 onPressed: () {
                   print('Button pressed ...');
@@ -177,6 +177,20 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                   ),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
+              ),
+            ),
+          ),
+          Align(
+            alignment: const AlignmentDirectional(0.0, 0.0),
+            child: Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+              child: Text(
+                'Username',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Inter',
+                      fontSize: 24.0,
+                      letterSpacing: 0.0,
+                    ),
               ),
             ),
           ),
