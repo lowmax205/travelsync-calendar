@@ -1,4 +1,4 @@
-# 🌍 TravelSync Calendar 📅
+# 🏫 School Project: 🌍 TravelSync Calendar 📅
 
 **TravelSync Calendar** is a mobile app made for travelers to easily sync national and local holidays based on where they’re going. Using location tracking and geofencing, the app keeps users updated on holidays, festivals, and events nearby. It also features a built-in wiki with detailed info, helping users plan their trips better and enjoy their travels more.
 
@@ -38,10 +38,10 @@ Your support and contributions to **TravelSync Calendar** are greatly appreciate
 
 ```bash
 # Clone the repository
-git clone https://github.com/lowmax205/travelsync_calendar.git
+git clone https://github.com/lowmax205/travelsync-calendar.git
 
 # Navigate to the project directory
-cd travelsync_calendar
+cd travelsync-calendar
 
 # Install dependencies (if applicable)
 flutter pub get
