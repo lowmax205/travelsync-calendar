@@ -2,6 +2,7 @@
 
 **TravelSync Calendar** is a mobile app made for travelers to easily sync national and local holidays based on where they’re going. Using location tracking and geofencing, the app keeps users updated on holidays, festivals, and events nearby. It also features a built-in wiki with detailed info, helping users plan their trips better and enjoy their travels more.
 
+![Status](https://img.shields.io/badge/Status-Ongoing-orange?style=for-the-badge)
 ---
 
 ## 🚀 Features
