@@ -3,25 +3,25 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'wiki_copy_model.dart';
-export 'wiki_copy_model.dart';
+import 'wiki_list_model.dart';
+export 'wiki_list_model.dart';
 
-class WikiCopyWidget extends StatefulWidget {
-  const WikiCopyWidget({super.key});
+class WikiListWidget extends StatefulWidget {
+  const WikiListWidget({super.key});
 
   @override
-  State<WikiCopyWidget> createState() => _WikiCopyWidgetState();
+  State<WikiListWidget> createState() => _WikiListWidgetState();
 }
 
-class _WikiCopyWidgetState extends State<WikiCopyWidget> {
-  late WikiCopyModel _model;
+class _WikiListWidgetState extends State<WikiListWidget> {
+  late WikiListModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => WikiCopyModel());
+    _model = createModel(context, () => WikiListModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -36,7 +36,10 @@ class _WikiCopyWidgetState extends State<WikiCopyWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,

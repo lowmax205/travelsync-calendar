@@ -12,4 +12,8 @@ export '/auth_pages/auth_forgot_password/auth_forgot_password_widget.dart'
 export '/auth_pages/auth_reset_password/auth_reset_password_widget.dart'
     show AuthResetPasswordWidget;
 export '/nav_pages/pages/wiki/wiki_widget.dart' show WikiWidget;
-export '/nav_pages/pages/wiki_copy/wiki_copy_widget.dart' show WikiCopyWidget;
+export '/nav_pages/pages/wiki_list/wiki_list_widget.dart' show WikiListWidget;
+export '/auth_pages/edit_profile/edit_profile_widget.dart'
+    show EditProfileWidget;
+export '/nav_pages/favorite_page/favorite_page_widget.dart'
+    show FavoritePageWidget;

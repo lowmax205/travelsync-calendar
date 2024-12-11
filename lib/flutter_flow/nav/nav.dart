@@ -85,6 +85,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
+          requireAuth: true,
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'HomePage')
               : const HomePageWidget(),
@@ -92,6 +93,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'CalendarPage',
           path: '/calendarPage',
+          requireAuth: true,
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'CalendarPage')
               : const CalendarPageWidget(),
@@ -99,6 +101,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'ProfilePage',
           path: '/profilePage',
+          requireAuth: true,
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'ProfilePage')
               : const ProfilePageWidget(),
@@ -106,6 +109,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'MapPage',
           path: '/mapPage',
+          requireAuth: true,
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'MapPage')
               : const MapPageWidget(),
@@ -133,12 +137,25 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Wiki',
           path: '/wiki',
+          requireAuth: true,
           builder: (context, params) => const WikiWidget(),
         ),
         FFRoute(
-          name: 'WikiCopy',
+          name: 'Wiki_list',
           path: '/Wiki_Information',
-          builder: (context, params) => const WikiCopyWidget(),
+          requireAuth: true,
+          builder: (context, params) => const WikiListWidget(),
+        ),
+        FFRoute(
+          name: 'edit_profile',
+          path: '/editProfile',
+          builder: (context, params) => const EditProfileWidget(),
+        ),
+        FFRoute(
+          name: 'FavoritePage',
+          path: '/favoritePage',
+          requireAuth: true,
+          builder: (context, params) => const FavoritePageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

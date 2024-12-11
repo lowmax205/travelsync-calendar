@@ -93,7 +93,10 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -548,13 +551,18 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
 
                                   await UserTbTable().update(
                                     data: {
+                                      'id': currentUserUid,
+                                      'created_at': supaSerialize<DateTime>(
+                                          getCurrentTimestamp),
+                                      'email': currentUserEmail,
                                       'username':
                                           _model.usernameTextController.text,
+                                      'name': '',
+                                      'profile_link': '',
+                                      'gender': '',
+                                      'bio': '',
                                     },
-                                    matchingRows: (rows) => rows.eqOrNull(
-                                      'email',
-                                      _model.emailAddressTextController.text,
-                                    ),
+                                    matchingRows: (rows) => rows,
                                   );
 
                                   context.goNamedAuth(
@@ -613,6 +621,10 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                   if (user == null) {
                                     return;
                                   }
+                                  await UserTbTable().insert({
+                                    'id': '',
+                                    'email': '',
+                                  });
 
                                   context.pushNamedAuth(
                                       'HomePage', context.mounted);
